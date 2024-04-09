@@ -5,7 +5,11 @@ require("mason").setup({
       package_installed = "✓",
       package_pending = "➜",
       package_uninstalled = "✗"
-    }
+    },
+  },
+
+  pip = {
+    upgrade_pip = true,
   }
 })
 
@@ -13,6 +17,15 @@ require("mason-lspconfig").setup({
   -- 确保安装，根据需要填写
   ensure_installed = {
     "lua_ls",
+    "clangd",
+    "cmake",
+    "pylsp",
+    --"python-lsp-server",
+    -- "pyright",
+    -- "tsserver",
+    -- "gopls",
+    -- "html",
+    -- "cssls",
   },
 })
 
