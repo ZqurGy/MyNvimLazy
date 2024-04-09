@@ -8,9 +8,9 @@ require("mason").setup({
     },
   },
 
-  pip = {
-    upgrade_pip = true,
-  }
+  -- pip = {
+  --   upgrade_pip = true,
+  -- }
 })
 
 require("mason-lspconfig").setup({
@@ -20,11 +20,10 @@ require("mason-lspconfig").setup({
     "clangd",
     "cmake",
     "pylsp",
-    --"python-lsp-server",
     -- "pyright",
     -- "tsserver",
-    -- "gopls",
-    -- "html",
+    "gopls",
+    "html",
     -- "cssls",
   },
 })
