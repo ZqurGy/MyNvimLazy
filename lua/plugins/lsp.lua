@@ -22,7 +22,7 @@ require("mason-lspconfig").setup({
     "pylsp",
     -- "pyright",
     -- "tsserver",
-    "gopls",
+    -- "gopls",
     "html",
     -- "cssls",
   },
@@ -32,5 +32,9 @@ require("mason-lspconfig").setup({
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("lspconfig").lua_ls.setup {
+  capabilities = capabilities,
+}
+-- 如果需要cmp 代码补全，lsp.xxx.setup 必须配置
+require("lspconfig").clangd.setup {
   capabilities = capabilities,
 }
